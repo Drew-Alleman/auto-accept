@@ -4,6 +4,8 @@ import time # For sleeping
 import os # For getting current directory
 
 cwd = os.getcwd() # Get current working directory
+version = "1.0.0" # Current version
+
 
 banner = '''
              _                                       _    
@@ -11,8 +13,8 @@ banner = '''
  / _` | | | | __/ _ \ _____ / _` |/ __/ __/ _ \ '_ \| __| 
 | (_| | |_| | || (_) |_____| (_| | (_| (_|  __/ |_) | |_  
  \__,_|\__,_|\__\___/       \__,_|\___\___\___| .__/ \__| 
-       Coded by Drew Alleman                  |_|         
-''' # Bannner message
+       Coded by Drew Alleman:{}            |_|         
+'''.format(version) # Bannner message
 
 imageNames = ['readyButtonNormal.png','acceptButton.png'] # Array of image names
 
@@ -23,7 +25,11 @@ def printFunc(msg): # Print function format: [<time>] message
 
 def clickButton():
     for image in imageNames: # for image in ['readyButtonNormal.png','acceptButton.png']
-        readyButton = pyautogui.locateCenterOnScreen(cwd+'\\'+image,grayscale=True,confidence=0.9) # Look for image
+        try:
+            readyButton = pyautogui.locateCenterOnScreen(cwd+'\\'+image,grayscale=True,confidence=0.9) # Look for image
+        except IOError:
+            printFunc("File: "+image+" was not found! Make sure both images are in the SAME directory as the exe/python file!")
+            exit()
         if readyButton is not None: # If readyButton is found
             readyButtonX, readyButtonY = readyButton # Define cords
             pyautogui.click(readyButtonX, readyButtonY) # Click cords
