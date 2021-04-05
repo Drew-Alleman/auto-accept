@@ -33,7 +33,6 @@ def clickButton():
         if readyButton is not None: # If readyButton is found
             readyButtonX, readyButtonY = readyButton # Define cords
             pyautogui.click(readyButtonX, readyButtonY) # Click cords
-            printFunc("Clicked button again!")
             return True # It worked!
         return False # It didnt :(
 
