@@ -12,7 +12,7 @@ no this program doesnt mess with the programs memory
 You can download python 3 from [here](https://www.python.org/downloads/) and install it.
 Go into the directory where the tool is located using the command cd in cmd
 ```
-pip install -r Requirements.txt
+pip install -r requirements.txt
 ```
 Use this command to download the tool used to convert python files to executables. 
 ```
