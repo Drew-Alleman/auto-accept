@@ -14,15 +14,15 @@ Go into the directory where the tool is located using the command cd in cmd
 ```
 pip install -r requirements.txt
 ```
-Use this command to download the tool used to convert python files to executables. 
-```
-pip3 install pyinstaller
-```
 Run it using 
 ```
 python3 main.py
 ```
-or compile the python file to a exe
+Or Convert the file into an executable  
+```
+pip3 install pyinstaller
+```
+compile the python file to a exe
 ```
 pyinstaller main.py --onefile
 ```
