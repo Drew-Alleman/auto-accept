@@ -16,7 +16,6 @@ banner = '''
        Coded by Drew Alleman:{}            |_|         
 '''.format(version) # Bannner message
 
-imageNames = ['1.png','2.png'] # Array of image names
 
 def printFunc(msg): # Print function format: [<time>] message
     now = datetime.now() # Get time
@@ -24,17 +23,16 @@ def printFunc(msg): # Print function format: [<time>] message
     print(prettyTime + msg) # Print message
 
 def clickButton():
-    for image in imageNames: # for image in ['1.png','2.png']
-        try:
-            readyButton = pyautogui.locateCenterOnScreen(cwd+'\\'+image,grayscale=True,confidence=0.8) # Look for image
-        except IOError: # If file not found
-            printFunc("File: "+image+" was not found! Make sure both images are in the SAME directory as the exe/python file!")
-            exit() # Exit
-        if readyButton is not None: # If readyButton is found
-            readyButtonX, readyButtonY = readyButton # Define cords
-            pyautogui.click(readyButtonX, readyButtonY) # Click cords
-            return True # It worked!
-        return False # It didnt :(
+    try:
+        readyButton = pyautogui.locateCenterOnScreen(cwd+'\\1.png',grayscale=True,confidence=0.8) # Look for image
+    except IOError: # If file not found
+        printFunc('File: 1.png was not found! Make sure both images are in the SAME directory as the exe/python file!')
+        exit() # Exit
+    if readyButton is not None: # If readyButton is found
+        readyButtonX, readyButtonY = readyButton # Define cords
+        pyautogui.click(readyButtonX, readyButtonY) # Click cords
+        return True # It worked!
+    return False # It didnt :(
 
 def mainLoop():
     printFunc('Press CTRL+C in this program to stop it.') # Print message/warning
