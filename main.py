@@ -16,7 +16,7 @@ banner = '''
        Coded by Drew Alleman:{}            |_|         
 '''.format(version) # Bannner message
 
-imageNames = ['readyButtonNormal.png','acceptButton.png'] # Array of image names
+imageNames = ['1.png','2.png'] # Array of image names
 
 def printFunc(msg): # Print function format: [<time>] message
     now = datetime.now() # Get time
@@ -24,7 +24,7 @@ def printFunc(msg): # Print function format: [<time>] message
     print(prettyTime + msg) # Print message
 
 def clickButton():
-    for image in imageNames: # for image in ['readyButtonNormal.png','acceptButton.png']
+    for image in imageNames: # for image in ['1.png','2.png']
         try:
             readyButton = pyautogui.locateCenterOnScreen(cwd+'\\'+image,grayscale=True,confidence=0.8) # Look for image
         except IOError: # If file not found
