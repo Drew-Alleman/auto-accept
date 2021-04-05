@@ -24,5 +24,5 @@ pip3 install pyinstaller
 ```
 compile the python file to a exe
 ```
-pyinstaller --onefile --icon=C:\PATH_TO_ICON\auto.ico -n autoaccept C:\PATH_TO_PYTHON_FILE\amain.py
+pyinstaller --onefile --icon=C:\PATH_TO_ICON\auto.ico -n autoaccept C:\PATH_TO_PYTHON_FILE\ main.py
 ```
