@@ -24,5 +24,5 @@ pip3 install pyinstaller
 ```
 compile the python file to a exe
 ```
-pyinstaller main.py --onefile
+pyinstaller --onefile --icon=auto.ico main.py
 ```
