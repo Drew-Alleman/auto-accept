@@ -26,13 +26,16 @@ def printFunc(msg): # Print function format: [<time>] message
 def clickButton():
     for image in imageNames: # for image in ['readyButtonNormal.png','acceptButton.png']
         try:
-            readyButton = pyautogui.locateCenterOnScreen(cwd+'\\'+image,grayscale=True,confidence=0.9) # Look for image
-        except IOError:
+            readyButton = pyautogui.locateCenterOnScreen(cwd+'\\'+image,grayscale=True,confidence=0.8) # Look for image
+        except IOError: # If file not found
             printFunc("File: "+image+" was not found! Make sure both images are in the SAME directory as the exe/python file!")
-            exit()
+            exit() # Exit
         if readyButton is not None: # If readyButton is found
             readyButtonX, readyButtonY = readyButton # Define cords
             pyautogui.click(readyButtonX, readyButtonY) # Click cords
+            time.sleep(2) # Sleep 2 seconds
+            pyautogui.click(readyButtonX, readyButtonY) # Click again
+            printFunc("Clicked button again!")
             return True # It worked!
         return False # It didnt :(
 
