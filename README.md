@@ -18,7 +18,11 @@ Use this command to download the tool used to convert python files to executable
 ```
 pip3 install pyinstaller
 ```
-Compile the python file
+Run it using 
+```
+python3 main.py
+```
+or compile the python file to a exe
 ```
 pyinstaller main.py --onefile
 ```
