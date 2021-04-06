@@ -6,17 +6,13 @@ You can download the latest *compiled* binary from [here](https://github.com/Dre
 
 # FAQ
 ## Will this get me VAC banned?
-no this program doesnt mess with the programs memory
+No this program doesnt mess with CS:GO's memory
 
 ## How do I compile the binary myself?
 You can download python 3 from [here](https://www.python.org/downloads/) and install it.
 Go into the directory where the tool is located using the command cd in cmd
 ```
 pip install -r requirements.txt
-```
-Run it using 
-```
-python3 main.py
 ```
 Or Convert the file into an executable  
 ```
@@ -26,3 +22,4 @@ compile the python file to a exe
 ```
 pyinstaller --onefile --icon=C:\PATH_TO_ICON\auto.ico -n autoaccept C:\PATH_TO_PYTHON_FILE\ main.py
 ```
+
