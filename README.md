@@ -1,6 +1,6 @@
 
 # Auto Accept
-CS:GO auto game Acceptor.
+CS:GO auto game acceptor.
 
 # How To Download
 You can download the latest *compiled* binary from [here](https://github.com/Drew-Alleman/auto-accept/releases).
