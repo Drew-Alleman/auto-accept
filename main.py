@@ -26,7 +26,7 @@ def clickButton():
     try:
         readyButton = pyautogui.locateCenterOnScreen(cwd+'\\1.png',grayscale=True,confidence=0.8) # Look for image
     except IOError: # If file not found
-        printFunc('File: 1.png was not found! Make sure both images are in the SAME directory as the exe/python file!')
+        printFunc('File: 1.png was not found! Make sure the image is in the SAME directory as the exe/python file!')
         exit() # Exit
     if readyButton is not None: # If readyButton is found
         readyButtonX, readyButtonY = readyButton # Define cords
