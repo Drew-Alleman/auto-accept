@@ -11,7 +11,7 @@ You can download the latest *compiled* binary from [here](https://github.com/Dre
 No this program doesnt interact with CS:GO's memory.
 
 ## It Just Closes/Crashes!
-make sure the executable is in the same directory as the image.
+make sure the executable is in the same directory as the image. If that doesnt work submit a report [here](https://github.com/Drew-Alleman/auto-accept/issues)
 
 ## How do I compile the binary myself?
 You can download python 3 from [here](https://www.python.org/downloads/).
