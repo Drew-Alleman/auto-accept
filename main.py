@@ -4,7 +4,7 @@ import time # For sleeping
 import os # For getting current directory
 
 cwd = os.getcwd() # Get current working directory
-version = "1.0.0" # Current version
+version = "0.1.0" # Current version
 
 
 banner = '''
