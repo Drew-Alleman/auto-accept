@@ -28,8 +28,5 @@ compile the python file to a exe
 pyinstaller --onefile --icon=C:\PATH_TO_ICON\auto.ico -n autoaccept C:\PATH_TO_PYTHON_FILE\ main.py
 ```
 
-# Console
-![showcase](/media/tool.PNG)
-
 # To Do
 * Hotkey exit
